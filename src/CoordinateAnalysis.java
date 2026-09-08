@@ -11,8 +11,8 @@ public class CoordinateAnalysis {
             double maxDistance = -1.0;
             double totalDistanceSum = 0.0;
             int validPointsCount = 0;
-            System.out.println("--- 2D Analisis de coordenadas ---");
-            System.out.println("Ingrese coordenadas (X Y). Ingrese 0 0 para realizar el proceso.");
+            System.out.println("--- 2D Coordinate Analysis ---");
+            System.out.println("Enter coordinates (X Y). Enter 0 0 to finish processing.");
             while (true) {
                 System.out.print("Ingrese punto (x y): ");
                 int x = scanner.nextInt();
@@ -23,7 +23,7 @@ public class CoordinateAnalysis {
                 }
                 
                 if (x < 0 && y < 0) {
-                    System.out.println("-> punto (" + x + ", " + y + ") está en el tercer cuadrante y será ignorado.");
+                    System.out.println("-> Point (" + x + ", " + y + ") is in the third quadrant and will be ignored.");
                     continue;
                 }
                 
@@ -47,11 +47,11 @@ public class CoordinateAnalysis {
             System.out.println("\n--- Resumen de resultados ---");
             if (validPointsCount > 0) {
                 double averageDistance = totalDistanceSum / validPointsCount;
-                System.out.println("Más cercano al origen: " + closestX + " " + closestY);
-                System.out.println("Más lejano del origen: " + furthestX + " " + furthestY);
-                System.out.println("Distancia media del origen: " + averageDistance);
+                System.out.println("Closest to origin: " + closestX + " " + closestY);
+                System.out.println("Furthest to origin: " + furthestX + " " + furthestY);
+                System.out.println("Average distance to origin: " + averageDistance);
             } else {
-                System.out.println("No se ingresaron puntos válidos.");
+                System.out.println("No valid points were entered.");
             }
         }
     }
